@@ -54,16 +54,43 @@ class API {
 
     private func GETOAuthUser(completion: (user: User?) -> ()) {
         
-        let request = SLRequest
+        let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: NSURL(string:"https://api.twitter.com/1.1/account/verify_credentials.json"), parameters: nil)
         
+        request.account = self.account
         
-        
-        
+        request.performRequestWithHandler { (data, response, error) in
+            
+            if let _ = error {
+                print("Error: SLRequest type GET for credentials could not be completed.")
+                completion(user: nil)
+            }
+            
+            switch response.statusCode {
+            case 200...299:
+                do {
+                    if let userJSON = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String : AnyObject] {
+                        completion(user: User(json: userJSON))
+                    }
+                } catch {
+                    print("Error: Could not serialize the JSON")
+                    completion(user: nil)
+                }
+                
+            case 400...499:
+                print("Client Error status code: \(response.statusCode)")
+                completion(user: nil)
+            case 500...599:
+                print("Server Error status code: \(response.statusCode)")
+                completion(user: nil)
+            default:
+                print("Default case on the status code")
+                completion(user: nil)
+            }
+        }
     }
-    
-    
-}
 
+
+}
 
 
 
