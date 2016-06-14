@@ -89,7 +89,57 @@ class API {
         }
     }
 
-
+    private func updateTimeline(completion: (tweets: [Tweet]?) -> ()) {
+        
+        let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json"), parameters: nil)
+        
+        request.account = self.account
+        
+        request.performRequestWithHandler { (data, response, error) in
+            
+            if let _ = error {
+                print("Error: SLRequest type get for user Timeline could not be completed.")
+                completion(tweets: nil)
+                return
+            }
+            
+            switch response.statusCode {
+            case 200...299:
+                JSONParser.tweetJSONFrom(data, completion: { (success, tweets) in
+                    dispatch_async(dispatch_get_main_queue(), {
+                        completion(tweets: tweets)
+                    })
+                })
+                
+            case 400...499:
+                print("Client Error status code: \(response.statusCode)")
+                completion(tweets: nil)
+            case 500...599:
+                print("Server Error status code: \(response.statusCode)")
+                completion(tweets: nil)
+            default:
+                print("Default case on the status code")
+                completion(tweets: nil)
+            }
+        }
+    }
+    
+    func getTweets(completion: (tweets: [Tweet]?) -> ()) {
+        
+        if let _ = self.account {
+            self.updateTimeline(completion)
+        } else {
+            self.login({ (account) in
+                if let account = account {
+                    API.shared.account = account
+                    self.updateTimeline(completion)
+                } else {
+                    print("Account is nil.")
+                }
+                
+            })
+        }
+    }
 }
 
 
