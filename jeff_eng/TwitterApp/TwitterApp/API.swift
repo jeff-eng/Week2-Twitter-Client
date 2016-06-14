@@ -136,7 +136,6 @@ class API {
                 } else {
                     print("Account is nil.")
                 }
-                
             })
         }
     }
