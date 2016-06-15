@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -75,8 +76,41 @@
                     <view key="view" contentMode="scaleToFill" id="4ez-8M-yMw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet goes here..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-R8-ISS" userLabel="Tweet Label">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-C0-P8o" userLabel="User Label">
+                                <rect key="frame" x="260.5" y="334.5" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xNw-C0-P8o" firstAttribute="top" secondItem="ZP2-R8-ISS" secondAttribute="bottom" constant="24" id="CPW-7g-gUM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xNw-C0-P8o" secondAttribute="trailing" constant="259" id="Cd3-th-hEq"/>
+                            <constraint firstItem="ZP2-R8-ISS" firstAttribute="leading" secondItem="4ez-8M-yMw" secondAttribute="leadingMargin" id="Eow-9s-4uO"/>
+                            <constraint firstItem="ZP2-R8-ISS" firstAttribute="centerY" secondItem="4ez-8M-yMw" secondAttribute="centerY" id="HRu-IQ-0Dv"/>
+                            <constraint firstItem="xNw-C0-P8o" firstAttribute="leading" secondItem="4ez-8M-yMw" secondAttribute="leadingMargin" constant="222" id="IwD-zu-loK"/>
+                            <constraint firstItem="xNw-C0-P8o" firstAttribute="centerX" secondItem="4ez-8M-yMw" secondAttribute="centerX" id="ohb-67-Q0J"/>
+                            <constraint firstItem="ZP2-R8-ISS" firstAttribute="trailing" secondItem="4ez-8M-yMw" secondAttribute="trailingMargin" id="zgE-9f-5SW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Cd3-th-hEq"/>
+                                <exclude reference="IwD-zu-loK"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tweetLabel" destination="ZP2-R8-ISS" id="htu-r4-UqM"/>
+                        <outlet property="userLabel" destination="xNw-C0-P8o" id="6Sy-mQ-L6s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qa2-Yj-vYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

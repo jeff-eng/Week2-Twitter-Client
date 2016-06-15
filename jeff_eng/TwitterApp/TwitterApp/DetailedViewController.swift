@@ -9,7 +9,10 @@
 import UIKit
 
 class DetailedViewController: UIViewController {
-
+    @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
