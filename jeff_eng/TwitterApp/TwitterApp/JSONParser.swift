@@ -17,17 +17,21 @@ class JSONParser {
                 
                 var tweets = [Tweet]()
                 
-                for tweetJSON in rootObject {
-                    if let tweet = Tweet(json: tweetJSON) {
-                        tweets.append(tweet)
-                    }
-                }
+                let subQueue = NSOperationQueue()
                 
-                //Completion on success.
-                completion(success: true, tweets: tweets)
+                subQueue.addOperationWithBlock({
+                    for tweetJSON in rootObject {
+                        if let tweet = Tweet(json: tweetJSON) {
+                            tweets.append(tweet)
+                        }
+                    }
+                    //Completion on success.
+                    completion(success: true, tweets: tweets)
+                })
+                
             }
         }
-        
+            
         catch { completion(success: false, tweets: nil) }
     }
     
