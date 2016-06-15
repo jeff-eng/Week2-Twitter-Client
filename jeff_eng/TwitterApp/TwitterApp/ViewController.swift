@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.setupTableView()
+        self.navigationItem.title = "Twitter App"
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -36,6 +37,11 @@ class ViewController: UIViewController {
 //                }
 //            }
 //        }
+    }
+    
+    func setupTableView() {
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func update() {
