@@ -110,6 +110,10 @@
                             <constraint firstItem="akd-DH-tKx" firstAttribute="centerX" secondItem="nFu-Qw-rck" secondAttribute="centerX" id="sf1-Zc-Bi6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="Zov-dX-dTQ" id="IDX-Nl-wdW"/>
+                        <outlet property="userLabel" destination="akd-DH-tKx" id="wLe-B1-5cp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrc-0S-XGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

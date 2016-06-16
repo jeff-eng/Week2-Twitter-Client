@@ -19,11 +19,13 @@ class DetailedViewController: UIViewController, Identity {
         
         if let tweet = self.tweet {
             if let retweet = tweet.retweet {
+                print(retweet.text)
                 self.tweetLabel.text = retweet.text
                 self.userLabel.text = retweet.user?.name
             }
             
             else {
+                print(tweet.text)
                 self.tweetLabel.text = tweet.text
                 self.userLabel.text = tweet.user?.name
             }
