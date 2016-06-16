@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		953884F31D10A89E004E425E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953884F21D10A89E004E425E /* API.swift */; };
+		95A4DCD51D13513600E15973 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4DCD41D13513600E15973 /* Cache.swift */; };
 		95E01CE41D11FBA9004C7054 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E01CE31D11FBA9004C7054 /* DetailedViewController.swift */; };
 		95E01CE61D120FA6004C7054 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E01CE51D120FA6004C7054 /* Identity.swift */; };
 		95E01CEA1D1220D2004C7054 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E01CE91D1220D2004C7054 /* ProfileViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		953884F21D10A89E004E425E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = TwitterApp/API.swift; sourceTree = "<group>"; };
+		95A4DCD41D13513600E15973 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		95E01CE31D11FBA9004C7054 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		95E01CE51D120FA6004C7054 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		95E01CE91D1220D2004C7054 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				95FD187F1D0F4CF500156FB5 /* AppDelegate.swift */,
 				95E01CE51D120FA6004C7054 /* Identity.swift */,
 				95FD188B1D0F4CF500156FB5 /* Info.plist */,
+				95A4DCD41D13513600E15973 /* Cache.swift */,
 			);
 			name = "App Global";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				95E01CE61D120FA6004C7054 /* Identity.swift in Sources */,
 				95FD18971D0F556C00156FB5 /* Tweet.swift in Sources */,
 				95FD18821D0F4CF500156FB5 /* ViewController.swift in Sources */,
+				95A4DCD51D13513600E15973 /* Cache.swift in Sources */,
 				95E01CEA1D1220D2004C7054 /* ProfileViewController.swift in Sources */,
 				953884F31D10A89E004E425E /* API.swift in Sources */,
 				95FD18801D0F4CF500156FB5 /* AppDelegate.swift in Sources */,

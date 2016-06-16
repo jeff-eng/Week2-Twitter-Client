@@ -144,6 +144,10 @@ class API {
         }
     }
     
+    func getUserTweets(username: String, completion: (tweets: [Tweet]?) -> ()) {
+        self.updateTimeline("https://api.twitter.com/1.1/statuses/home_timeline.json?screen_name=\(username)", completion: completion)
+    }
+    
 }
 
 
