@@ -127,18 +127,23 @@ class API {
     func getTweets(completion: (tweets: [Tweet]?) -> ()) {
         
         if let _ = self.account {
-            self.updateTimeline(completion)
+            self.updateTimeline("https://api.twitter.com/1.1/statuses/home_timeline.json", completion: completion)
         } else {
             self.login({ (account) in
                 if let account = account {
+                    
+                    //Set the account
                     API.shared.account = account
-                    self.updateTimeline(completion)
+                    
+                    //Make the tweets call
+                    self.updateTimeline("https://api.twitter.com/1.1/statuses/home_timeline.json", completion: completion)
                 } else {
                     print("Account is nil.")
                 }
             })
         }
     }
+    
 }
 
 
