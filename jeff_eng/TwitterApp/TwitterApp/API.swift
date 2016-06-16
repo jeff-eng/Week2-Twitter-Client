@@ -18,7 +18,7 @@ class API {
     
     var account: ACAccount?
     
-    private func login(completion: (account: ACAccount?) -> ())
+    func login(completion: (account: ACAccount?) -> ())
     {
         //Set up Account store
         let accountStore = ACAccountStore()
@@ -52,7 +52,7 @@ class API {
         })
     }
 
-    private func GETOAuthUser(completion: (user: User?) -> ()) {
+    func GETOAuthUser(completion: (user: User?) -> ()) {
         
         let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: NSURL(string:"https://api.twitter.com/1.1/account/verify_credentials.json"), parameters: nil)
         

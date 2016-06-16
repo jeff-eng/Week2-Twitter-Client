@@ -10,6 +10,7 @@
 		953884F31D10A89E004E425E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953884F21D10A89E004E425E /* API.swift */; };
 		95E01CE41D11FBA9004C7054 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E01CE31D11FBA9004C7054 /* DetailedViewController.swift */; };
 		95E01CE61D120FA6004C7054 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E01CE51D120FA6004C7054 /* Identity.swift */; };
+		95E01CEA1D1220D2004C7054 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E01CE91D1220D2004C7054 /* ProfileViewController.swift */; };
 		95FD18801D0F4CF500156FB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD187F1D0F4CF500156FB5 /* AppDelegate.swift */; };
 		95FD18821D0F4CF500156FB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD18811D0F4CF500156FB5 /* ViewController.swift */; };
 		95FD18851D0F4CF500156FB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FD18831D0F4CF500156FB5 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		953884F21D10A89E004E425E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = TwitterApp/API.swift; sourceTree = "<group>"; };
 		95E01CE31D11FBA9004C7054 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		95E01CE51D120FA6004C7054 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
+		95E01CE91D1220D2004C7054 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95FD187C1D0F4CF500156FB5 /* TwitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FD187F1D0F4CF500156FB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95FD18811D0F4CF500156FB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				95FD18811D0F4CF500156FB5 /* ViewController.swift */,
 				95E01CE31D11FBA9004C7054 /* DetailedViewController.swift */,
+				95E01CE91D1220D2004C7054 /* ProfileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				95E01CE61D120FA6004C7054 /* Identity.swift in Sources */,
 				95FD18971D0F556C00156FB5 /* Tweet.swift in Sources */,
 				95FD18821D0F4CF500156FB5 /* ViewController.swift in Sources */,
+				95E01CEA1D1220D2004C7054 /* ProfileViewController.swift in Sources */,
 				953884F31D10A89E004E425E /* API.swift in Sources */,
 				95FD18801D0F4CF500156FB5 /* AppDelegate.swift in Sources */,
 			);

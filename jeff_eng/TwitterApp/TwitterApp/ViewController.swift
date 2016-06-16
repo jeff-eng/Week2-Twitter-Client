@@ -56,6 +56,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == DetailedViewController.id() {
+            guard let detailedViewController = segue.destinationViewController as? DetailedViewController else { return }
+            guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+            detailedViewController.tweet = self.datasource[indexPath.row]
+            
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
