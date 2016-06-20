@@ -12,6 +12,13 @@ class DetailedViewController: UIViewController, Identity {
     @IBOutlet weak var tweetLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     
+    var cache : Cache<UIImage>? {
+        if let delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            return delegate.cache
+        }
+        return nil
+    }
+    
     var tweet: Tweet?
     
     override func viewDidLoad() {
